@@ -12,8 +12,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-sql = "SELECT id, username, password, FROM Users";
-result = mysqli_query($conn, $sql);
+$sql = "SELECT id, username, password, FROM Users";
+$result = mysqli_query($conn, $sql);
 
 print_r( mysqli_num_rows($result) );
 
