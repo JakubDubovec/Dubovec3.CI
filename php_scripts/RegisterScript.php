@@ -49,9 +49,9 @@ $hashed_password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 echo "unhashed password = " . $_POST["password"];
 echo $hashed_password;
 
-require_once("./connect.php");
+require_once("./Connection.php");
 
-if($password_match && $validated){
+if($password_match == true && $validated == true){
     $sql = 'INSERT INTO users(password,email,username) VALUES("'. $_POST["password"] .'","'.$_POST["email"] .'","'.$_POST["username"].'");';
 
     if ($conn->query($sql) == TRUE) {
